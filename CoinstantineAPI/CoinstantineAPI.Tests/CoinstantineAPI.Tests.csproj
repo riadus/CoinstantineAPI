@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
+    <PackageReference Include="xunit" Version="2.2.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+    <PackageReference Include="FakeItEasy" Version="4.5.0" />
+    <PackageReference Include="FluentAssertions" Version="5.4.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Builders\" />
+    <Folder Include="ThirdPartyTests\" />
+    <Folder Include="AirdropTests\" />
+    <Folder Include="Scheduler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Builders\MockRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoinstantineAPI.Core\CoinstantineAPI.Core.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Aidrops\CoinstantineAPI.Aidrops.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.BitcoinTalkProvider\CoinstantineAPI.BitcoinTalkProvider.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Blockchain\CoinstantineAPI.Blockchain.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.Countries\CoinstantineAPI.Countries.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Data\CoinstantineAPI.Data.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Database\CoinstantineAPI.Database.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Documents\CoinstantineAPI.Documents.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Email\CoinstantineAPI.Email.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Encryption\CoinstantineAPI.Encryption.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Notifications\CoinstantineAPI.Notifications.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Scan\CoinstantineAPI.Scan.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Scheduler\CoinstantineAPI.Scheduler.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.TelegramProvider\CoinstantineAPI.TelegramProvider.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Translations\CoinstantineAPI.Translations.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.TwitterProvider\CoinstantineAPI.TwitterProvider.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Validations\CoinstantineAPI.Users.csproj" />
+  </ItemGroup>
+</Project>

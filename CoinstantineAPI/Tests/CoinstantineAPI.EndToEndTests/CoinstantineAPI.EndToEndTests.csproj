@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CoinstantineAPI.Aidrops\CoinstantineAPI.Aidrops.csproj" />
+    <ProjectReference Include="..\..\DataProviders\CoinstantineAPI.BitcoinTalkProvider\CoinstantineAPI.BitcoinTalkProvider.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Blockchain\CoinstantineAPI.Blockchain.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Core\CoinstantineAPI.Core.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Data\CoinstantineAPI.Data.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Database\CoinstantineAPI.Database.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Encryption\CoinstantineAPI.Encryption.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Documents\CoinstantineAPI.Documents.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Nethereum\CoinstantineAPI.Nethereum.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Notifications\CoinstantineAPI.Notifications.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Scan\CoinstantineAPI.Scan.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Scheduler\CoinstantineAPI.Scheduler.csproj" />
+    <ProjectReference Include="..\..\DataProviders\CoinstantineAPI.TelegramProvider\CoinstantineAPI.TelegramProvider.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Translations\CoinstantineAPI.Translations.csproj" />
+    <ProjectReference Include="..\..\DataProviders\CoinstantineAPI.TwitterProvider\CoinstantineAPI.TwitterProvider.csproj" />
+    <ProjectReference Include="..\..\CoinstantineAPI.Validations\CoinstantineAPI.Validations.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.IntegrationTests\CoinstantineAPI.IntegrationTests.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
+    <PackageReference Include="Shouldly" Version="3.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.3" />
+    <PackageReference Include="RichardSzalay.MockHttp" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Azure.KeyVault" Version="3.0.3" />
+    <PackageReference Include="Microsoft.Azure.NotificationHubs" Version="3.0.1" />
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.12.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+  </ItemGroup>
+</Project>

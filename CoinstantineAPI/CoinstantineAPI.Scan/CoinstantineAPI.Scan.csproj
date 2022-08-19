@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Dtos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoinstantineAPI.Core\CoinstantineAPI.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Mappers\TokenInfoMapper.cs" />
+    <Compile Remove="Mappers\TokenMapper.cs" />
+    <Compile Remove="Mappers\EthInfoMapper.cs" />
+    <Compile Remove="Mappers\SymbolMapper.cs" />
+  </ItemGroup>
+</Project>

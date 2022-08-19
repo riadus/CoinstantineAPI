@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.4" />
+    <PackageReference Include="System.Data.Common" Version="4.3.0" />
+  </ItemGroup>
+<ItemGroup>
+<DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+</ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\CoinstantineAPI.Data\CoinstantineAPI.Data.csproj" />
+  <ProjectReference Include="..\CoinstantineAPI.Core\CoinstantineAPI.Core.csproj" />
+</ItemGroup>
+<ItemGroup>
+  <Compile Remove="MemoryRepository.cs" />
+  <Compile Remove="UnitOfWork.cs" />
+  <Compile Remove="ContextRepository.cs" />
+  <Compile Remove="Migrations\20180812100145_Initial.cs" />
+</ItemGroup>
+</Project>

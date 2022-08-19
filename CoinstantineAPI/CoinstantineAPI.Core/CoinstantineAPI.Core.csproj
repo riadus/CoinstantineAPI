@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Blockchain\" />
+    <Folder Include="Database\" />
+    <Folder Include="Services\" />
+    <Folder Include="Validations\" />
+    <Folder Include="Users\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="External\" />
+    <Folder Include="Airdrops\" />
+    <Folder Include="DataProviders\" />
+    <Folder Include="Documents\" />
+    <Folder Include="Encryption\" />
+    <Folder Include="Email\" />
+    <Folder Include="Statistics\" />
+    <Folder Include="Games\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoinstantineAPI.Data\CoinstantineAPI.Data.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Nethereum\CoinstantineAPI.Nethereum.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Database\IRepository.cs" />
+  </ItemGroup>
+</Project>

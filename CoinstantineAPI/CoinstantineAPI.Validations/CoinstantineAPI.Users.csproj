@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Bct\" />
+    <Folder Include="Telegram\" />
+    <Folder Include="Twitter\" />
+    <Folder Include="Unicity\" />
+    <Folder Include="Unicity\Strategies\" />
+    <Folder Include="Referals\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoinstantineAPI.Core\CoinstantineAPI.Core.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Data\CoinstantineAPI.Data.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.TelegramProvider\CoinstantineAPI.TelegramProvider.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.TwitterProvider\CoinstantineAPI.TwitterProvider.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.4.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+  </ItemGroup>
+</Project>

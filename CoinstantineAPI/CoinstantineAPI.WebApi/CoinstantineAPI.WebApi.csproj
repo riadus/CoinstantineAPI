@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="DTO\" />
+    <Folder Include="Formatter\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="Responses\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Middleware\" />
+    <Folder Include="Middleware\Attributes\" />
+    <Folder Include="ControllersHealth\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5"><PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+<Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+</PackageReference>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Telegram.Bot" Version="14.11.0" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.7.0" />
+    <PackageReference Include="AutoMapper" Version="8.1.0" />
+    <PackageReference Include="Microsoft.Azure.NotificationHubs" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="2.2.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.0.5" />
+    <PackageReference Include="Microsoft.Azure.KeyVault" Version="3.0.3" />
+    <PackageReference Include="TweetinviAPI" Version="4.0.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Moq" Version="4.11.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.0" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+    <PackageReference Include="System.Runtime" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoinstantineAPI.Aidrops\CoinstantineAPI.Aidrops.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Blockchain\CoinstantineAPI.Blockchain.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Core\CoinstantineAPI.Core.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Data\CoinstantineAPI.Data.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Database\CoinstantineAPI.Database.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Nethereum\CoinstantineAPI.Nethereum.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Notifications\CoinstantineAPI.Notifications.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Scan\CoinstantineAPI.Scan.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Translations\CoinstantineAPI.Translations.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.BitcoinTalkProvider\CoinstantineAPI.BitcoinTalkProvider.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.TelegramProvider\CoinstantineAPI.TelegramProvider.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.TwitterProvider\CoinstantineAPI.TwitterProvider.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Scheduler\CoinstantineAPI.Scheduler.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Documents\CoinstantineAPI.Documents.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Encryption\CoinstantineAPI.Encryption.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Email\CoinstantineAPI.Email.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.Countries\CoinstantineAPI.Countries.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.VerifyCaptcha\CoinstantineAPI.VerifyCaptcha.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Validations\CoinstantineAPI.Users.csproj" />
+    <ProjectReference Include="..\DataProviders\CoinstantineAPI.DiscordBot\CoinstantineAPI.DiscordBot.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Statistics\CoinstantineAPI.Statistics.csproj" />
+    <ProjectReference Include="..\CoinstantineAPI.Games\CoinstantineAPI.Games.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Mappers\IMapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ContractInfo\CreateAirdrop.js" />
+    <None Remove="Documents\WhitePaper.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Documents\WhitePaper.pdf" />
+  </ItemGroup>
+</Project>
